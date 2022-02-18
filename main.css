@@ -1,0 +1,253 @@
+:root {
+  --main-color: #1f2937;
+  --cta-color: #3882f6;
+  --border-radius: 7px;
+}
+
+/* GENERAL PAGE STYLES */
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  color: var(--main-color);
+}
+
+main {
+  flex: auto;
+}
+
+section {
+  padding: 1rem 0;
+}
+
+h1, h2, .logo {
+  font-weight: 900;
+}
+
+.header, .hero, .footer {
+  color: #f9faf9;
+  background-color: var(--main-color);
+}
+
+.secondary-text {
+  font-size: 1.125rem;
+  color: #e5e7eb;
+}
+
+.button {
+  background-color: var(--cta-color);
+  font-weight: bold;
+  padding: 0.5rem 2.4rem;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  transition: filter 0.3s ease;
+  align-self: center;
+  flex: none;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+/* HEADER */
+
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.header .navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* HERO */
+
+.hero {
+  padding: 1rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.media-object {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.media-object > * {
+  flex: 1;
+}
+
+.hero .image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6c737c;
+  min-height: 200px;
+}
+
+.hero .copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* INFORMATION SECTION */
+
+.information h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+
+.figures figure {
+  width: 150px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.figures .image-placeholder {
+  height: 150px;
+  border: 3px solid var(--cta-color);
+  border-radius: 10px;
+}
+
+.figures figcaption {
+  color: #4b5662;
+}
+
+/* QUOTE SECTION */
+
+.quote {
+  background-color: #e5e7eb;
+}
+
+.quote figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quote .quote-text {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.quote .quote-author {
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-align: right;
+}
+
+/* CALL TO ACTION */
+
+.cta {
+  background-color: var(--cta-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  color: white;
+}
+
+.cta .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.cta .button {
+  border: 2px solid white;
+}
+
+.cta h2 {
+  font-size: 1.3rem;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* DESKTOP STYLES */
+
+@media (min-width: 650px) {
+  .button {
+    align-self: flex-start;
+  }
+
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .media-object {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .information {
+    padding: 2rem 0 5rem;
+  }
+
+  .figures {
+    padding-top: 2.5rem;
+  }
+
+  .quote {
+    padding: 5rem 0 4rem;
+  }
+
+  .cta-section {
+    padding: 4rem 0;
+  }
+
+  .cta .content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+  }
+}
